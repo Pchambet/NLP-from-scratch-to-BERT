@@ -1,86 +1,86 @@
-# 🧠 L'Odyssée du NLP : Du Chaos vers le Sens
+# 🧠 The NLP Odyssey: From Chaos to Understanding
 
-> *"Le langage est la source des malentendus."* — Antoine de Saint-Exupéry.
+> *"Language is the source of misunderstandings."* — Antoine de Saint-Exupéry.
 >
-> Mais pour une machine, le langage n'est même pas un malentendu. C'est juste du bruit. Une suite inintelligible d'octets. Ce projet raconte l'histoire de comment nous avons appris aux machines à voir à travers ce bruit, à découvrir des structures, et finalement, à comprendre le sens.
+> Yet, for a machine, language is not even a misunderstanding. It is merely noise. An unintelligible stream of bytes. This project chronicles the story of how we taught machines to see through this noise, to discern structure, and ultimately, to grasp meaning.
 
 ---
 
-## 🗺️ La Carte du Voyage
+## 🗺️ The Map of the Journey
 
-Ce dépôt n'est pas juste une collection de scripts. C'est une progression logique, une ascension en quatre étapes vers l'intelligence artificielle moderner.
+This repository is not merely a collection of scripts. It is a logical progression, an ascent in four stages towards modern artificial intelligence.
 
-### 🌑 Chapitre 1 : L'Atome (TP1 — Prétraitement)
-Avant de comprendre une phrase, il faut isoler ses composants. C'est l'étape de la **Tokenisation**.
-Ici, nous faisons exploser le texte. Nous nettoyons le bruit (ponctuation, majuscules), nous jetons ce qui est inutile (Stopwords), et nous cherchons la racine de chaque mot (Stemming & Lemmatisation).
-👉 *Objectif : Transformer un flux de caractères informe en une séquence d'unités logiques.*
+### 🌑 Chapter 1: The Atom (TP1 — Preprocessing)
+Before one can comprehend a sentence, one must isolate its components. This is the stage of **Tokenization**.
+Here, we shatter the text. We cleanse the noise (punctuation, capitalization), we discard the unnecessary (Stopwords), and we seek the very root of each word (Stemming & Lemmatization).
+👉 *Goal: To transform a shapeless stream of characters into a sequence of logical units.*
 
-### 📊 Chapitre 2 : La Matrice (TP2 — BOW & TF-IDF)
-Maintenant que nous avons des mots, comment les faire comprendre à un ordinateur qui ne parle que des mathématiques ? Nous les comptons.
-Avec le **Bag of Words**, nous transformons chaque texte en un vecteur immense. Avec le **TF-IDF**, nous donnons du poids à la rareté : un mot commun comme "le" s'efface, tandis qu'un mot unique comme "trous noir" brille de mille feux.
-👉 *Objectif : Transformer la littérature en statistique pour classifier des emails (Spam vs Ham).*
+### 📊 Chapter 2: The Matrix (TP2 — BOW & TF-IDF)
+Now that we possess the words, how do we make them understood by a computer that speaks only in mathematics? We count them.
+With the **Bag of Words**, we transform each text into an immense vector. With **TF-IDF**, we grant weight to rarity: a common word like "the" fades into the background, while a unique term like "black hole" shines with significance.
+👉 *Goal: To transmute literature into statistics for the classification of emails (Spam vs. Ham).*
 
-### 🌌 Chapitre 3 : La Géométrie (TP3 — Word2Vec & FastText)
-Les statistiques ne suffisent pas. Dans le Bag of Words, "Roi" et "Reine" sont aussi différents que "Roi" et "Chaise". Ils sont juste des colonnes différentes.
-Ici, nous entrons dans l'ère des **Embeddings**. Nous projetons les mots dans un espace vectoriel dense. Dans cet espace, la distance a un sens. La magie opère : `Vecteur(Roi) - Vecteur(Homme) + Vecteur(Femme) ≈ Vecteur(Reine)`.
-👉 *Objectif : Capturer la sémantique et les analogies grâce à la géométrie spatiale.*
+### 🌌 Chapter 3: The Geometry (TP3 — Word2Vec & FastText)
+Statistics alone are insufficient. In the Bag of Words, "King" and "Queen" are as distinct as "King" and "Chair". They are merely different columns.
+Here, we enter the era of **Embeddings**. We project words into a dense vector space. In this space, distance holds meaning. The magic unfolds: `Vector(King) - Vector(Man) + Vector(Woman) ≈ Vector(Queen)`.
+👉 *Goal: To capture semantics and analogies through the elegance of spatial geometry.*
 
-### 🧠 Chapitre 4 : L'Esprit (TP4 — BERT)
-Nous avons l'atome, la statistique et la géométrie. Mais il manquait le **contexte**.
-Jusqu'à maintenant, le mot "banque" avait le même vecteur qu'il s'agisse d'une "banque finance" ou d'un "banc de poissons". Avec **BERT** (Bidirectional Encoder Representations from Transformers), le modèle lit toute la phrase d'un coup. Il comprend les nuances. Il a "lu" tout Wikipédia. Il sait.
-👉 *Objectif : Utiliser le Transfer Learning pour atteindre des sommets de performance avec peu de données.*
+### 🧠 Chapter 4: The Mind (TP4 — BERT)
+We had the atom, the statistics, and the geometry. But we lacked the **context**.
+Until now, the word "bank" held the same vector whether it referred to a "financial bank" or a "river bank". With **BERT** (Bidirectional Encoder Representations from Transformers), the model reads the entire sentence at once. It perceives the nuances. It has "read" all of Wikipedia. It knows.
+👉 *Goal: To harness Transfer Learning to reach the pinnacles of performance with minimal data.*
 
 ---
 
-## 🛠️ Le Laboratoire (Installation)
+## 🛠️ The Laboratory (Installation)
 
-Pour reproduire ces expériences, vous avez besoin de votre propre laboratoire.
+To reproduce these experiments, you shall require your own laboratory.
 
-### 1. Préparation
-Assurez-vous d'avoir Python installé. Clonez ce dépôt, puis installez les dépendances :
+### 1. Preparation
+Ensure you have Python installed. Clone this repository, then install the dependencies:
 
 ```bash
-# La méthode moderne (avec uv)
+# The modern method (with uv)
 uv run jupyter lab
 
-# Ou la méthode classique
+# Or the classic method
 pip install pandas numpy nltk scikit-learn gensim matplotlib seaborn transformers datasets torch accelerate
 jupyter lab
 ```
 
-### 2. Vérification
-Nous avons inclus un script pour valider que votre environnement est prêt :
+### 2. Verification
+We have included a script to validate that your environment is prepared:
 
 ```bash
 python verify_env.py
 ```
 
 ### 3. Exploration
-Ouvrez le dossier `Solutions/`. Les notebooks sont numérotés pour suivre l'histoire dans l'ordre.
-Chaque notebook est **autonome** : les résultats sont déjà calculés et visibles, mais vous pouvez tout ré-exécuter.
+Open the `Solutions/` directory. The notebooks are numbered to follow the tale in its proper order.
+Each notebook is **self-contained**: the results are already calculated and visible, yet you are free to re-execute everything.
 
 ---
 
-## 📂 Organisation du Dépôt
+## 📂 Repository Structure
 
 ```
 .
-├── Solutions/               # Le cœur du projet (Les 4 Chapitres)
+├── Solutions/               # The Heart of the Project (The 4 Chapters)
 │   ├── TP1_Pretraitement.ipynb
 │   ├── TP2_BOW_TFIDF.ipynb
 │   ├── TP3_Word2Vec_FastText.ipynb
 │   └── TP4_BERT.ipynb
 │
-├── data/                    # La matière première
+├── data/                    # The Raw Material
 │   ├── alice_wonderland.txt
 │   ├── spam.csv
-│   └── (autres datasets...)
+│   └── (other datasets...)
 │
-└── verify_env.py            # Le filet de sécurité
+└── verify_env.py            # The Safety Net
 ```
 
 ---
 
-> *"Toute technologie suffisamment avancée est indiscernable de la magie."* — Arthur C. Clarke.
+> *"Any sufficiently advanced technology is indistinguishable from magic."* — Arthur C. Clarke.
 >
-> Bienvenue dans la magie du NLP.
+> Welcome to the magic of NLP.
