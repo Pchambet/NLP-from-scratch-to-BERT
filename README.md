@@ -48,7 +48,11 @@ uv run jupyter lab
 
 # Ou classiquement
 pip install pandas numpy nltk scikit-learn gensim matplotlib seaborn transformers datasets torch accelerate
+pip install pandas numpy nltk scikit-learn gensim matplotlib seaborn transformers datasets torch accelerate
 jupyter lab
+
+# Pour vérifier que tout est bien installé :
+python verify_env.py
 ```
 
 Puis ouvrir les notebooks dans `Solutions/` dans l'ordre TP1 → TP4.
