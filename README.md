@@ -1,5 +1,9 @@
 # 🧠 The NLP Odyssey: From Chaos to Understanding
 
+> **🎓 A Note for the Reviewer**
+>
+> If you seek to evaluate the practical implementation of this project, please direct your attention to the `Solutions/` directory. There you shall find the four notebooks, fully executed and annotated, ready for your appraisal.
+
 > *"Language is the source of misunderstandings."* — Antoine de Saint-Exupéry.
 >
 > Yet, for a machine, language is not even a misunderstanding. It is merely noise. An unintelligible stream of bytes. This project chronicles the story of how we taught machines to see through this noise, to discern structure, and ultimately, to grasp meaning.
